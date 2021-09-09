@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        function formPostHandler() {
+            var xhr = new XMLHttpRequest();
+            var params = 'X=' + encodeURIComponent(document.getElementById("X").value) +
+                '&Y=' + encodeURIComponent(document.getElementById("Y").value);
+
+            xhr.open("POST", '/getpost?' + params, false);
+
+            xhr.onreadystatechange = function () {
+                if (this.readyState === 4) {
+                    if (this.status >= 200 && this.status < 400) {
+                        document.getElementById("postResult").innerText = this.responseText
+                    } else {
+                        document.getElementById("postResult").innerText = this.responseText
+                    }
+                }
+            };
+
+            xhr.send();
+        }
+
+    </script>
+</head>
+<body>
+    <h1>WebApplication_1a</h1>
+    <h2>SumHttpHandler</h2>
+    <form action="/sum" method="post" id="form">
+        <input type="text" name="X" id="inputX" placeholder="X" />
+        <input type="text" name="Y" id="inputY" placeholder="Y" />
+        <input type="submit" value="get sum"/>
+    </form>
+    <h2>GetPostHttpHandler with XMLHTTPRequest </h2>
+    <input type="text" placeholder="X" id="X" />
+    <input type="text" placeholder="Y" id="Y" />
+    <input type="button" value="send" onclick="formPostHandler()" />
+    <div>
+        <span>RESULT: </span>
+        <span id="postResult"></span>
+    </div>
+    <h2>GetPostHttpHandler with form</h2>
+    <form action="/getpost" method="post" id="form">
+        <input type="text" name="X" placeholder="X" />
+        <input type="text" name="Y" placeholder="Y" />
+        <input type="submit" value="send" />
+    </form>
+</body>
+</html>
