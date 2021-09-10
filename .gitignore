@@ -1,9 +1,9 @@
+# programming of mobile systems
 *.idea
 venv
 *.db
 *.log
 /target
-/bin
 /**/.idea
 /**/out
 /**/*.iml
@@ -12,3 +12,10 @@ venv
 /**/*.iml
 /**/target
 *.swp
+
+# programming on the internet
+*.exe
+*.dll
+/**/.vs
+/**/obj
+/**/bin
