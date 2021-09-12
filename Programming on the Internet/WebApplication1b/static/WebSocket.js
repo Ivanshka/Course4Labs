@@ -25,7 +25,7 @@ function WriteMessage(idspan, txt) {
 
 function exe_start() {
     if (ws == null) {
-        ws = new WebSocket("ws://localhost:51237/Websockets.websocket");
+        ws = new WebSocket("ws://localhost:8888/Websockets.websocket");
         ws.onopen = () => ws.send('Connection')
         ws.onclose = (s) => console.log('onclose', s);
         ws.onmessage = (e) => ta.innerHTML += '\n' + e.data;
@@ -35,7 +35,7 @@ function exe_start() {
 }
 
 function exe_stop() {
-    //ws.send("stop");
+    ws.send("stop");
     ws.close(3001);
     ws = null;
     bstart.disabled = false;
