@@ -9,7 +9,7 @@ Data=pd.read_csv('browser-ww-monthly-202008-202108.csv', delimiter=',')
 print(Data)
 
 newData=Data['Firefox']
-newData['3']=10
+newData[3]=10
 print(newData)
 
 sns_plot = sns.histplot(newData)
