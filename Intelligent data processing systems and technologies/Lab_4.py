@@ -4,18 +4,18 @@ import seaborn as sns
 
 dataFrame=pd.read_csv('trees.csv', delimiter=',')
 print(dataFrame)
+#1.info
 colours = ['#eeeeee' , '#ff0000']
 sns.heatmap(dataFrame.isnull(), cmap=sns.color_palette(colours))
 plt.show()
-#info
 print(dataFrame.info())
 print(dataFrame.isnull().sum())
 print(dataFrame.isnull())
-#excluding values
+#2.excluding values
 newDataFrame = dataFrame.drop(columns=dataFrame.columns[dataFrame.isna().sum(axis=0) == dataFrame.isna().sum(axis=0).max()])
 newDataFrame = dataFrame.drop(index=dataFrame.index[dataFrame.isna().sum(axis=1) == dataFrame.isna().sum(axis=1).max()])
 print(newDataFrame)
-#filleng NAN values
+#3.filleng NAN values
 newDataFrameAVG=newDataFrame.fillna(newDataFrame.mean())
 print("AVG")
 print(newDataFrameAVG)
@@ -25,7 +25,7 @@ print(newDataFrameModa)
 newDataFrameFFill=newDataFrame.fillna(method="ffill")
 print("Previous value")
 print(newDataFrameFFill)
-
+#4.draw
 h0 = dataFrame['Girth'].hist()
 fig0 = h0.get_figure()
 plt.show()
