@@ -1,0 +1,3 @@
+https://www.dmosk.ru/instruktions.php?object=iredmail-ubuntu
+
+Все, что в статье идет после настройки iRedMail (отключение Graylist и т.д.) делать НЕ НАДО!
