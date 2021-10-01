@@ -1,6 +1,6 @@
 # programming of mobile systems
 *.idea
-venv
+/**/venv
 *.db
 *.log
 /target
