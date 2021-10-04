@@ -1,0 +1,25 @@
+﻿@using WebApplication3.Models
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+    <a href="/Dict/Index">Back home</a>
+    <div>
+        <form method="POST" action="/Dict/AddSave">
+            <input type="text" name="lastname" />
+            <input type="text" name="phoneNumber" />
+            <input type="submit" value="ok" />
+        </form>
+    </div>
+</body>
+</html>
+
