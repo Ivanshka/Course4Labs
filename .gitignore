@@ -12,6 +12,7 @@
 /**/*.iml
 /**/target
 *.swp
+/Labs
 
 # programming on the internet
 *.exe
