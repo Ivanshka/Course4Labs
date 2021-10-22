@@ -10,6 +10,7 @@ print(df.head())
 
 sns.heatmap(df.corr(), annot = True, fmt='.1g')
 plt.show()
+
 sns.pairplot(df)
 plt.show()
 
