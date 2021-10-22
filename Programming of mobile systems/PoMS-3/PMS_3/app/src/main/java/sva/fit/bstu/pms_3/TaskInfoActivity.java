@@ -1,4 +1,4 @@
-package znp.fit.bstu.pms_3;
+package sva.fit.bstu.pms_3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import znp.fit.bstu.pms_3.model.Task;
+import sva.fit.bstu.pms_3.model.Task;
 
 public class TaskInfoActivity extends AppCompatActivity implements View.OnClickListener {
 

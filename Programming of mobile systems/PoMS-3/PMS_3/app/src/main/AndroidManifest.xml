@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="znp.fit.bstu.pms_3" >
+    package="sva.fit.bstu.pms_3" >
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -17,7 +17,7 @@
         android:theme="@style/Theme.PMS_3"
         android:requestLegacyExternalStorage="true">
         <activity
-            android:name=".AllTaskActivity"
+            android:name="sva.fit.bstu.pms_3.AllTaskActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,13 +26,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TaskSummaryActivity"
+            android:name="sva.fit.bstu.pms_3.TaskSummaryActivity"
             android:exported="true" />
         <activity
-            android:name=".TaskInfoActivity"
+            android:name="sva.fit.bstu.pms_3.TaskInfoActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name="sva.fit.bstu.pms_3.MainActivity"
             android:exported="true" >
         </activity>
     </application>
