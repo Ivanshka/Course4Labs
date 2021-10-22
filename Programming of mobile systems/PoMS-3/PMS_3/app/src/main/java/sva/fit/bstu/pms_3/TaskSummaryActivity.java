@@ -1,4 +1,4 @@
-package znp.fit.bstu.pms_3;
+package sva.fit.bstu.pms_3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,8 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import znp.fit.bstu.pms_3.context.DiContext;
-import znp.fit.bstu.pms_3.model.Task;
+import sva.fit.bstu.pms_3.context.DiContext;
+import sva.fit.bstu.pms_3.model.Task;
 
 public class TaskSummaryActivity extends AppCompatActivity implements View.OnClickListener {
 

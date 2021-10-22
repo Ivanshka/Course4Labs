@@ -1,10 +1,9 @@
-package znp.fit.bstu.pms_3.model;
+package sva.fit.bstu.pms_3.model;
 
 import java.io.Serializable;
 import java.util.Date;
 
 import lombok.Data;
-import lombok.ToString;
 
 @Data
 public class Task implements Serializable {

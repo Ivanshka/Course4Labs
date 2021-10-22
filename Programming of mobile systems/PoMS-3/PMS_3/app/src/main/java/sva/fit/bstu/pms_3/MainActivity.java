@@ -1,4 +1,4 @@
-package znp.fit.bstu.pms_3;
+package sva.fit.bstu.pms_3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,7 +15,7 @@ import android.widget.EditText;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import znp.fit.bstu.pms_3.model.Task;
+import sva.fit.bstu.pms_3.model.Task;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, DatePicker.OnDateChangedListener {
 

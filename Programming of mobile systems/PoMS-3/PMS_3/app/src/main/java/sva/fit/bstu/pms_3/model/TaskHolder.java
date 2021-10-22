@@ -1,4 +1,4 @@
-package znp.fit.bstu.pms_3.model;
+package sva.fit.bstu.pms_3.model;
 
 import java.util.ArrayList;
 import java.util.List;

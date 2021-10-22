@@ -1,9 +1,9 @@
-package znp.fit.bstu.pms_3.context;
+package sva.fit.bstu.pms_3.context;
 
 import lombok.Getter;
 import lombok.Setter;
-import znp.fit.bstu.pms_3.model.TaskHolder;
-import znp.fit.bstu.pms_3.util.JsonUtil;
+import sva.fit.bstu.pms_3.model.TaskHolder;
+import sva.fit.bstu.pms_3.util.JsonUtil;
 
 @Getter
 @Setter

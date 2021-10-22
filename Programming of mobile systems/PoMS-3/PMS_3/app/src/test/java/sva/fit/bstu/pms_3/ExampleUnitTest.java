@@ -1,4 +1,4 @@
-package znp.fit.bstu.pms_3;
+package sva.fit.bstu.pms_3;
 
 import org.junit.Test;
 

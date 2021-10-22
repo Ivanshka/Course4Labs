@@ -1,4 +1,4 @@
-package znp.fit.bstu.pms_3;
+package sva.fit.bstu.pms_3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,8 +12,7 @@ import android.widget.ListView;
 
 import java.io.File;
 
-import znp.fit.bstu.pms_3.context.DiContext;
-import znp.fit.bstu.pms_3.model.TaskHolder;
+import sva.fit.bstu.pms_3.context.DiContext;
 
 public class AllTaskActivity extends AppCompatActivity implements View.OnClickListener {
 
