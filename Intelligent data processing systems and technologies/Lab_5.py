@@ -19,6 +19,7 @@ print(df)
 df["quality"]=df["quality"].map({"good": 1, "bad": 0})
 print(df.head())
 print(df.info())
+
 # формируем ветор меток y
 y=df["quality"].astype("int")
 # формируем массив данных x
@@ -60,19 +61,20 @@ print(knn_grid.best_score_, knn_grid.best_params_)
 
 
 print(tree_grid.best_estimator_)
-
 tree_valid_pred = tree_grid.predict(x_valid) # прогноз на отложенной выборке
 print(tree_valid_pred[0:20]) # первые 20 спрогнозированых меток
 print(accuracy_score(y_valid, tree_valid_pred))
 print(confusion_matrix(y_valid, tree_valid_pred))
 
+# выводим дерево решений в dot файл
 first_tree.fit(x_train,y_train)
 tree.export_graphviz(first_tree, out_file='tree.dot', feature_names=x_train.columns)
 
-
+# здесь выводится различные графики по датасету,
+# работает ОЧЕНЬ медленно,
 sns.pairplot(df, hue="quality", palette="icefire")
 plt.show()
-
+# выводим график доли ошибок при разном количестве соседей
 error = []
 for i in range(1, 40):
     knn = KNeighborsClassifier(n_neighbors=i)
