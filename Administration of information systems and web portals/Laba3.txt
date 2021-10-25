@@ -1,0 +1,71 @@
+Методичка:
+22. ЛР Zabbix.docx
+
+Инструкция:
+https://routerus.com/how-to-install-and-configure-zabbix-on-ubuntu-18-04/
+По ней ставил сервер Zabbix, для установки MySQL там есть ссылка на годную короткую статью.
+
+Zabbix Agent для Windows:
+https://www.zabbix.com/download_agents?version=4.0+LTS&release=4.0.35&os=Windows&os_version=Any&hardware=i386&encryption=OpenSSL&packaging=MSI&show_legacy=0
+
+Я качал и сервер, и агент версии 4.0 LTS.
+
+Установка Zabbix Agent:
+https://www.dmosk.ru/miniinstruktions.php?mini=zabbix-agent-windows#install-msi
+
+Создание карты сети:
+https://it-school.pw/sozdaem-kartu-seti-v-zabbix-5-0-lts/
+Я просто отредачил дефолтную
+
+Используемые мной адреса машин:
+	Адрес сервера Ubuntu:												192.168.56.10
+	Адрес клиента Windows 7 Client:										192.168.56.11
+	
+	Встроенный DNS от VirtualBox был отключен, адреса выставлены вручную.
+
+									П Р О Б Л Е М Ы
+
+На карте пишет "Zabbix agent on Windows 7 Client is unreachable for 5 minutes"
+
+	1) Классика: вырубаем брандмауэр или создаем для агента Zabbix правило, потому что сам он себя
+	в исключения НЕ ДОБАВЛЯЕТ
+	
+		Не помогло?
+
+	1) Заходим в файл конфигурации Zabbix "zabbix_agentd.conf".
+	2) В секции "Option: Timeout" выставляем параметр Timeout=30. По умолчанию стоит лишь 3 минуты
+	3) Перезагружаем клиент (служба Windows или )
+		
+		Не помогло?
+	
+	1) В этом же файле комментируем через # параметр ServerActive=127.0.0.1.
+	2) Перезагружаем клиент (служба Windows)
+	
+		Не помогло?
+		
+	1) https://bobcares.com/blog/zabbix-agent-on-zabbix-server-is-unreachable-for-5-minutes/
+	2) Читаем главу "Incorrect Host settings"
+		
+		Не помогло?
+		
+	1) Смотрим лог в папке Zabbix. Если есть какая-то ошибка, то вполне возможно, что проблема на
+	стороне клиента и следует еще раз проверить файл конфигурации. В целом ориентируемся на описание ошибки.
+	2) Если ошибок нет и лог выглядит примерно вот так:
+	
+  3276:20211025:212452.236 Starting Zabbix Agent [Windows 7 Client]. Zabbix 4.0.35 (revision 32c9b897b6).
+  3276:20211025:212452.236 **** Enabled features ****
+  3276:20211025:212452.236 IPv6 support:          YES
+  3276:20211025:212452.236 TLS support:           YES
+  3276:20211025:212452.236 **************************
+  3276:20211025:212452.236 using configuration file: C:\Program Files\Zabbix Agent\zabbix_agentd.conf
+  3276:20211025:212452.278 agent #0 started [main process]
+  3280:20211025:212452.300 agent #1 started [collector]
+  3292:20211025:212452.300 agent #4 started [listener #3]
+  3284:20211025:212452.300 agent #2 started [listener #1]
+  3288:20211025:212452.300 agent #3 started [listener #2]
+  
+	...а IP-адрес сервера в конфиге выставлен верно, то скорее всего проблема на сервере. В этом случае
+	идем в веб-панель управление и удаляем нах хост-клиент из списка, после чего заново создаем его.
+	
+P.S. Машины запускаем так: сначала клиент Windows, потом - сервер Ubuntu. Потому что если Zabbix снова упадет в
+ошибку "Это мудак не отвечает ЦЕЛЫХ ПЯТЬ МИНУТ", может быть довольно весело.
