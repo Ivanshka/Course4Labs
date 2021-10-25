@@ -1,3 +1,6 @@
+Метода:
+21. ЛР Nginx.docx
+
 https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-as-a-web-server-and-reverse-proxy-for-apache-on-one-ubuntu-18-04-server-ru
 
 Инструкция рассчитана на выполнение НА ЧИСТОЙ ВИРТУАЛКЕ, т.е. БЕЗ IREDMAIL (без 1-й лабы).
