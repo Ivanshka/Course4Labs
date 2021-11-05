@@ -13,6 +13,12 @@ namespace WebApplication5
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //routes.MapRoute(
+            //    name: "HW",
+            //    url: "{controller}/{action}",
+            //    defaults: new { controller = "Dict", action = "Index" }
+            //);
+
             routes.MapRoute(
                 name: "C01",
                 url: "CResearch/{action}",
@@ -21,8 +27,8 @@ namespace WebApplication5
 
             routes.MapRoute(
                 name: "M03b",
-                url: "V3/{controller}/X/{action}/{id}",
-                defaults: new { controller = "MResearch", action = "M03", id = UrlParameter.Optional }
+                url: "V3/{controller}/X/{action}",
+                defaults: new { controller = "MResearch", action = "M03"}
             );
 
             //routes.MapRoute(
@@ -40,8 +46,14 @@ namespace WebApplication5
 
             routes.MapRoute(
                 name: "M02",
-                url: "V2/{controller}/{action}/{id}",
-                defaults: new { controller = "MResearch", action = "M02", id = UrlParameter.Optional }
+                url: "V2/{controller}/M02",
+                defaults: new { controller = "MResearch", action = "M02" }
+            );
+
+            routes.MapRoute(
+                name: "M02b",
+                url: "V2/{controller}/M01",
+                defaults: new { controller = "MResearch", action = "M01" }
             );
 
             routes.MapRoute(
