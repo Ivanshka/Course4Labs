@@ -1,4 +1,4 @@
-package znp.fit.bstu.pms_5;
+package pdv.fit.bstu.pms_5;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -13,19 +13,17 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.util.Log;
 import android.view.ContextMenu;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
 import java.util.List;
 
-import znp.fit.bstu.pms_5.context.DiContext;
-import znp.fit.bstu.pms_5.model.Deed;
+import pdv.fit.bstu.pms_5.context.DiContext;
+import pdv.fit.bstu.pms_5.model.Deed;
 
 public class DeedListFragment extends Fragment implements View.OnClickListener {
 

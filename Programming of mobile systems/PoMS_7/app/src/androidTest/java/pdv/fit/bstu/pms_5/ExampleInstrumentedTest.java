@@ -1,4 +1,4 @@
-package znp.fit.bstu.pms_5;
+package pdv.fit.bstu.pms_5;
 
 import android.content.Context;
 

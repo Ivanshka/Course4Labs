@@ -1,7 +1,6 @@
-package znp.fit.bstu.pms_5;
+package pdv.fit.bstu.pms_5;
 
 import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +10,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import znp.fit.bstu.pms_5.model.Deed;
+import pdv.fit.bstu.pms_5.model.Deed;
 
 public class ListAdapter extends ArrayAdapter<Deed> {
 

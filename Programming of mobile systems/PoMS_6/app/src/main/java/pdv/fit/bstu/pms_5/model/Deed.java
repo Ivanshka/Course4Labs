@@ -1,4 +1,4 @@
-package znp.fit.bstu.pms_5.model;
+package pdv.fit.bstu.pms_5.model;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

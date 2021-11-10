@@ -6,7 +6,7 @@ android {
     compileSdk 28
 
     defaultConfig {
-        applicationId "znp.fit.bstu.pms_5"
+        applicationId "pdv.fit.bstu.pms_5"
         minSdk 28
         targetSdk 28
         versionCode 1

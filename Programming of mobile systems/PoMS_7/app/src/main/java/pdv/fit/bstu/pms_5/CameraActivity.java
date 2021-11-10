@@ -1,4 +1,4 @@
-package znp.fit.bstu.pms_5;
+package pdv.fit.bstu.pms_5;
 
 import android.Manifest;
 import android.app.Activity;
@@ -15,14 +15,10 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
-import znp.fit.bstu.pms_5.context.DiContext;
-import znp.fit.bstu.pms_5.model.Deed;
+import pdv.fit.bstu.pms_5.context.DiContext;
+import pdv.fit.bstu.pms_5.model.Deed;
 
 public class CameraActivity extends Activity implements View.OnClickListener {
     private static final int CAMERA_REQUEST = 1888;

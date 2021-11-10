@@ -1,4 +1,4 @@
-package znp.fit.bstu.pms_5.context;
+package pdv.fit.bstu.pms_5.context;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -10,12 +10,8 @@ import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import lombok.Getter;
-import lombok.Setter;
-import znp.fit.bstu.pms_5.ListAdapter;
-import znp.fit.bstu.pms_5.R;
-import znp.fit.bstu.pms_5.model.Deed;
-import znp.fit.bstu.pms_5.model.DeedsHolder;
+import pdv.fit.bstu.pms_5.model.Deed;
+import pdv.fit.bstu.pms_5.model.DeedsHolder;
 
 public class DiContext {
     public static final String PATH_TO_JSON = "tasks.json";

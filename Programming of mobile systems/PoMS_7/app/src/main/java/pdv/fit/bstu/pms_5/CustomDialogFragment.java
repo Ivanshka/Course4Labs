@@ -1,4 +1,4 @@
-package znp.fit.bstu.pms_5;
+package pdv.fit.bstu.pms_5;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -6,8 +6,8 @@ import android.os.Bundle;
 
 import androidx.fragment.app.DialogFragment;
 
-import znp.fit.bstu.pms_5.context.DiContext;
-import znp.fit.bstu.pms_5.model.Deed;
+import pdv.fit.bstu.pms_5.context.DiContext;
+import pdv.fit.bstu.pms_5.model.Deed;
 
 public class CustomDialogFragment extends DialogFragment {
 

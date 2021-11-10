@@ -1,10 +1,8 @@
-package znp.fit.bstu.pms_5;
+package pdv.fit.bstu.pms_5;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
-import znp.fit.bstu.pms_5.model.Deed;
 
 public class Description extends AppCompatActivity {
 
