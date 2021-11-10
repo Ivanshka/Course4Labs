@@ -1,0 +1,25 @@
+﻿@using WebApplication5b.Models
+@{
+    Layout = null;
+    Contact contact = ViewBag.contact;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Update</title>
+</head>
+<body>
+    <a href="/Dict/Index">Back home</a>
+    <div>
+        <form action="/Dict/UpdateSave" method="POST">
+            <input type="hidden" value="@contact.Id" name="id"/>
+            <input type="text" value="@contact.Lastname" name="lastname"/>
+            <input type="text" value="@contact.PhoneNumber" name="phoneNumber"/>
+            <input type="submit" value="ok" />
+        </form>
+    </div>
+</body>
+</html>
