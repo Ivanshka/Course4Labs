@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace WebApplication5b.Controllers
 {
+    [RoutePrefix("it")]
     public class MResearchController : Controller
     {
 
@@ -15,6 +16,8 @@ namespace WebApplication5b.Controllers
             return View();
         }
 
+        [AcceptVerbs("get", "post")]
+        [Route("{id:bool}/{letters:alpha}")]
         public ActionResult M02(bool id, string letters)
         {
             ViewBag.method = HttpContext.Request.HttpMethod;
@@ -23,6 +26,9 @@ namespace WebApplication5b.Controllers
             return View();
         }
 
+        [AcceptVerbs("get", "delete")]
+        //[HttpGet, HttpDelete]
+        [Route("{id:float}/{str:minlength(2):maxlength(5)}")]
         public ActionResult M03(float id, String str)
         {
             ViewBag.method = HttpContext.Request.HttpMethod;
@@ -32,6 +38,7 @@ namespace WebApplication5b.Controllers
         }
 
         [HttpPut]
+        [Route("{letters:alpha:minlength(3):maxlength(4)}/{id:int:range(100,200)}")]
         public ActionResult M04put(String letters, int id)
         {
             String method = HttpContext.Request.HttpMethod;
@@ -41,6 +48,7 @@ namespace WebApplication5b.Controllers
         }
         
         [HttpPost]
+        [Route("{id:regex(^\\w*[@]\\w*$)}")]
         public ActionResult M04post(String id)
         {
             String method = HttpContext.Request.HttpMethod;
@@ -55,6 +63,7 @@ namespace WebApplication5b.Controllers
         }
         
         [HttpGet]
+        [Route("{id:int}/{str}")]
         public ActionResult M01B(int id, String str)
         {
             ViewBag.n = id;
