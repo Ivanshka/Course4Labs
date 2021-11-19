@@ -19,7 +19,7 @@ namespace WebApplication5b.Controllers
         }
 
         [Route("chres/AP")]
-        [OutputCache(Duration = 7, Location = OutputCacheLocation.Server)]
+        [OutputCache(Duration = 7, Location = OutputCacheLocation.Server,VaryByParam ="x;y")]
         [HttpPost]
         public ActionResult AP(int x, int y)
         {
