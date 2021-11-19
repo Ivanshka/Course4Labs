@@ -39,6 +39,18 @@ namespace WebApplication5
 
 
             routes.MapRoute(
+                name: "M02c",
+                url: "V2/",
+                defaults: new { controller = "MResearch", action = "M02" }
+            );
+
+            routes.MapRoute(
+                name: "M02d",
+                url: "V2/{controller}",
+                defaults: new { controller = "MResearch", action = "M02" }
+            );
+
+            routes.MapRoute(
                 name: "M03",
                 url: "V3/",
                 defaults: new { controller = "MResearch", action = "M03" }
@@ -58,8 +70,16 @@ namespace WebApplication5
 
             routes.MapRoute(
                 name: "M01",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "MResearch", action = "M01", id = UrlParameter.Optional }
+
+                url: "{controller}/M01/{id}",
+                defaults: new { controller = "MResearch", action = "M01" }
+            );
+
+            routes.MapRoute(
+                name: "M01b",
+
+                url: "{controller}/{action}",
+                defaults: new { controller = "MResearch", action = "M01" }
             );
 
         }
