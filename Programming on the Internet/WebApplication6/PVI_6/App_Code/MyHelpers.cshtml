@@ -1,0 +1,21 @@
+﻿
+@using PVI_6.Models
+
+@helper AddContact()
+{
+    <form method="POST" action="/Dict/AddSave">
+        <input type="text" name="lastname" />
+        <input type="text" name="phoneNumber" />
+        <input type="submit" value="ok" />
+    </form>
+}
+
+@helper UpdateContact(Contact contact)
+{
+    <form action="/Dict/UpdateSave" method="POST">
+        <input type="hidden" value="@contact.Id" name="id" />
+        <input type="text" value="@contact.Lastname" name="lastname" />
+        <input type="text" value="@contact.PhoneNumber" name="phoneNumber" />
+        <input type="submit" value="ok" />
+    </form>
+}
