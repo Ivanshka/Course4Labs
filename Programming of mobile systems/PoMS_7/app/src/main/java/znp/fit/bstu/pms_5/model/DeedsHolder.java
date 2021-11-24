@@ -3,7 +3,6 @@ package znp.fit.bstu.pms_5.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import lombok.Getter;
 import lombok.ToString;
 
 @ToString

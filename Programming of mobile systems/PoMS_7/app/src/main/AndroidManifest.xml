@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PMS_5">
         <activity
-            android:name=".Description"
+            android:name="znp.fit.bstu.pms_5.Description"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name="znp.fit.bstu.pms_5.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CameraActivity"
+            android:name="znp.fit.bstu.pms_5.CameraActivity"
             android:exported="true">
         </activity>
     </application>
