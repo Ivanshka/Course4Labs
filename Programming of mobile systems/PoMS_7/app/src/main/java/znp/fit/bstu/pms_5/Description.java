@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import znp.fit.bstu.pms_5.model.Deed;
-
 public class Description extends AppCompatActivity {
 
     @Override

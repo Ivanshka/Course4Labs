@@ -10,10 +10,6 @@ import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import lombok.Getter;
-import lombok.Setter;
-import znp.fit.bstu.pms_5.ListAdapter;
-import znp.fit.bstu.pms_5.R;
 import znp.fit.bstu.pms_5.model.Deed;
 import znp.fit.bstu.pms_5.model.DeedsHolder;
 
