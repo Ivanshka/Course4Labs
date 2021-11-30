@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+</head>
+<body>
+    <a href="/Dict/Index">Back home</a>
+    <div>
+        @MyHelpers.AddContact()
+    </div>
+</body>
+</html>
+
+
+@section Footer {
+    Все права защищены. 2021.
+}
+
+@section Header {
+    <h3>
+        <a href="/Dict/Index">Home</a>
+    </h3>
+}
