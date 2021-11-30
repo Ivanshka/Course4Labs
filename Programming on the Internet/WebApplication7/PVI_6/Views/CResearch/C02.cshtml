@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+
+    String responseStatus = ViewBag.responseStatus;
+    String headers = ViewBag.headers;
+    String body = ViewBag.body;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>C02</title>
+</head>
+<body>
+    <div>
+        ResponseStatus: @responseStatus <br /> <br />
+        Headers: @headers<br /> <br />
+        body: @body<br /> <br />
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿@using PVI_6.Models
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Contact[] contacts = ViewBag.allContacts;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+</head>
+<body>
+    <div>
+        <a href="/Dict/Add">Add</a>
+    </div>
+    <div>
+        <a href="/Dict/Delete">Delete</a>
+    </div>
+    <div>
+        @foreach (Contact contact in contacts)
+        {
+            @Html.Partial("Partial", contact)
+        }
+    </div>
+</body>
+</html>
+
+@section Footer {
+    Все права защищены. 2021.
+}
+
+@section Header {
+    <h3>
+        <a href="/Dict/Index">Home</a>
+    </h3>
+}

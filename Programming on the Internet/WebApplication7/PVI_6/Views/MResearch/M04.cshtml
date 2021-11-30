@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>M04</title>
+</head>
+<body>
+    <div>
+        @if (ViewBag.method.Equals("PUT")) {
+        <div>PUT:M04 /@ViewBag.letters/@ViewBag.n</div>
+        } else {
+            <div>POST:@ViewBag.mail</div>
+        }
+    </div>
+</body>
+</html>

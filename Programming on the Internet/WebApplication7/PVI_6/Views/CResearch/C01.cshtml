@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+
+    String method = ViewBag.method;
+    String parameters = ViewBag.parameters;
+    String url = ViewBag.url;
+    String headers = ViewBag.headers;
+    String body = ViewBag.body;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>C01</title>
+</head>
+<body>
+    <div> 
+        Method: @method <br/> <br />
+        Parameters: @parameters<br /> <br />
+        Url: @url<br /> <br />
+        Headers: @headers<br /> <br />
+        @if (method.Equals("POST")) {
+            <span>Body:</span> @body<br /> <br />
+        }
+    </div>
+</body>
+</html>

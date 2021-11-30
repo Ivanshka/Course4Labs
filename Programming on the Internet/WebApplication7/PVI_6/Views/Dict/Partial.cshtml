@@ -1,0 +1,9 @@
+﻿@using PVI_6.Models
+
+@model PVI_6.Models.Contact
+
+<p>
+    @Model.Lastname @Model.PhoneNumber
+    <a href="/Dict/DeleteSave?id=@Model.Id">Delete </a>
+    <a href="/Dict/Update?id=@Model.Id">Update</a>
+</p>

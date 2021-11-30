@@ -1,0 +1,156 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            function deleteContact(id) {
+                let objToDelete = {
+                    "Id": id
+                };
+                console.log(objToDelete)
+                console.log(JSON.stringify(objToDelete))
+
+                $.ajax({
+                    method: "DELETE",
+                    contentType: "application/json",
+                    data: JSON.stringify(objToDelete),
+                    url: "http://localhost:84/TS",
+                    success: function (data) {
+                        getAllContacts()
+                    }
+                })
+            }
+
+            function getAllContacts() {
+                $.ajax({
+                    method: "GET",
+                    url: "http://localhost:84/TS",
+                    success: function (data) {
+                        console.log(data)
+                        $('#contacts').html("")
+
+                        data.forEach(contact => {
+
+                            let contactDiv = document.createElement('div');
+                            $(contactDiv).attr('id', contact.Id)
+
+                            let idSpan = document.createElement('span');
+                            $(idSpan).html(contact.Id+ " - ");
+                            $(idSpan).appendTo($(contactDiv));
+
+                            let lastnameSpan = document.createElement('span');
+                            $(lastnameSpan).html(contact.Lastname + " - ");
+                            $(lastnameSpan).appendTo($(contactDiv));
+
+                            let phoneNumberSpan = document.createElement('span');
+                            $(phoneNumberSpan).html(contact.PhoneNumber);
+                            $(phoneNumberSpan).appendTo($(contactDiv));
+
+                            let deleteButton = document.createElement('button');
+                            $(deleteButton).html("delete")
+                                .click(() => deleteContact(contact.Id));
+                            $(deleteButton).appendTo($(contactDiv));
+
+                            $(contactDiv).appendTo($('#contacts'))
+
+                        })
+                    }
+                })
+
+            }
+
+            function postContact() {
+                let lastname = $("#lastname").val();
+                let phoneNumber = $("#phoneNumber").val();
+                let objToSend = {
+                    "Lastname": lastname,
+                    "PhoneNumber": phoneNumber
+                };
+
+                console.log(objToSend)
+                console.log(JSON.stringify(objToSend))
+
+                $.ajax({
+                    method: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(objToSend),
+                    url: "http://localhost:84/TS",
+                    success: function (data) {
+                        getAllContacts()
+                    }
+                })
+            }
+
+            function putContact() {
+                let id = $("#idPut").val();
+                let lastname = $("#lastnamePut").val();
+                let phoneNumber = $("#phoneNumberPut").val();
+                let objToSend = {
+                    "Id": id,
+                    "Lastname": lastname,
+                    "PhoneNumber": phoneNumber
+                };
+
+                console.log(objToSend)
+                console.log(JSON.stringify(objToSend))
+
+                $.ajax({
+                    method: "PUT",
+                    contentType: "application/json",
+                    data: JSON.stringify(objToSend),
+                    url: "http://localhost:84/TS",
+                    success: function (data) {
+                        getAllContacts()
+                    }
+                })
+            }
+
+            $("#addContactForm").submit(function (e) {
+                e.preventDefault();
+                postContact();
+            })
+            $("#putContactForm").submit(function (e) {
+                e.preventDefault();
+                putContact();
+            })
+
+            $("#refreshButton").click(() => getAllContacts());
+
+
+
+
+            getAllContacts()
+        })
+
+    </script>
+    <title>Index</title>
+</head>
+<body>
+    <h3>Creation</h3>
+    <form id="addContactForm">
+        <input type="text" id="lastname" placeholder="lastname"/>
+        <input type="text" id="phoneNumber" placeholder="phone number"/>
+        <button type="submit">add contact</button>
+    </form>
+    <h3>updating</h3>
+    <form id="putContactForm">
+        <input type="text" id="idPut" placeholder="id"/>
+        <input type="text" id="lastnamePut" placeholder="lastname"/>
+        <input type="text" id="phoneNumberPut" placeholder="phone number"/>
+        <button type="submit">change contact</button>
+    </form>
+    <button id="refreshButton">refresh contacts</button>
+    <div id="contacts"> 
+
+    </div>
+</body>
+</html>
