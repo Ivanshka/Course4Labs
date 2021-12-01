@@ -11,7 +11,7 @@ namespace PVI_6
     {
         public override void Load()
         {
-            bool isSqlMode = false;
+            bool isSqlMode = true;
 
             if (isSqlMode)
             {
