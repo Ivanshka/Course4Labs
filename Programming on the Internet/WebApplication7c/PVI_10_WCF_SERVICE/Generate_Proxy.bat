@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\SvcUtil.exe"  http://localhost:9001/MyService  /out:MyServiceProxy.cs  /config:App.config
