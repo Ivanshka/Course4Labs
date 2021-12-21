@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Core12</name>
+    </assembly>
+    <members>
+        <member name="M:Core12.Controllers.UserController.GetUsers">
+            <summary>
+            Get users
+            </summary>
+            <param name="id"></param>
+            <response code="201">201 CREATED</response>
+            <response code="400">400 Bad Request</response>
+        </member>
+        <member name="M:Core12.Controllers.UserController.GetUser(System.Int32)">
+            <summary>
+            Get user
+            </summary>
+            <param name="id"></param>
+            <response code="201">201 CREATED</response>
+            <response code="400">400 Bad Request</response>
+        </member>
+        <member name="M:Core12.Controllers.UserController.PostUser(Core12.Models.User)">
+            <summary>
+            Post user
+            </summary>
+            <param name="id"></param>
+            <response code="201">201 CREATED</response>
+            <response code="400">400 Bad Request</response>
+        </member>
+        <member name="M:Core12.Controllers.UserController.DeleteUser(System.Int32)">
+            <summary>
+            Delete user
+            </summary>
+            <param name="id"></param>
+            <response code="201">201 CREATED</response>
+            <response code="400">400 Bad Request</response>
+        </member>
+        <member name="M:Core12.Controllers.UserController.PutContact(Core12.Models.User)">
+            <summary>
+            Put user
+            </summary>
+            <param name="id"></param>
+            <response code="201">201 CREATED</response>
+            <response code="400">400 Bad Request</response>
+        </member>
+        <member name="P:Core12.Models.User.Id">
+            <summary>
+            example: does not matter
+            </summary>
+        </member>
+        <member name="P:Core12.Models.User.lastname">
+            <summary>
+            example: does not matter
+            </summary>
+        </member>
+        <member name="P:Core12.Models.User.firstname">
+            <summary>
+            example: does not matter
+            </summary>
+        </member>
+        <member name="P:Core12.Models.User.email">
+            <summary>
+            example: does not matter
+            </summary>
+        </member>
+        <member name="P:Core12.Models.User.password">
+            <summary>
+            example: does not matter
+            </summary>
+        </member>
+        <member name="P:Core12.Models.User.status">
+            <summary>
+            example: does not matter
+            </summary>
+        </member>
+        <member name="P:Core12.Models.User.role">
+            <summary>
+            example: does not matter
+            </summary>
+        </member>
+    </members>
+</doc>
