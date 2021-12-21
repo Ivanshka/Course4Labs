@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+    Contact[] contacts = ViewBag.allContacts;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+</head>
+<body>
+    <div>
+        <a href="/Dict/Add">Add</a>
+    </div>
+    <div>
+        <a href="/Dict/Delete">Delete</a>
+    </div>
+    <div>
+        @foreach (Contact contact in contacts)
+        {
+            <p>
+                [@contact.Id] @contact.Lastname @contact.PhoneNumber
+                <a href="/Dict/Update?id=@contact.Id">Update</a>
+            </p>
+        }
+    </div>
+</body>
+</html>
+
+@section Footer {
+    Все права защищены. Zadorozhny. 2021.
+}
+
+@section Header {
+    <h3>
+        <a href="/Dict/Index">Home</a>
+    </h3>
+}
